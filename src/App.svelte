@@ -2,10 +2,13 @@
   import logo from './assets/svelte.png'
   import Counter from './lib/Counter.svelte'
   import Navbar from './lib/Navbar.svelte';
+  import Profile from './lib/Profile.svelte';
 </script>
 
 <Navbar />
-<main>
+<Profile />
+
+<!-- <main>
   <img src={logo} alt="Svelte Logo" />
   <h1>Hello world!</h1>
   <Counter />
@@ -19,9 +22,9 @@
     Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
     the officially supported framework, also powered by Vite!
   </p>
-</main>
+</main> -->
 
-<style>
+<!-- <style>
   :root {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -63,4 +66,4 @@
       max-width: none;
     }
   }
-</style>
+</style> -->
