@@ -10,7 +10,7 @@
     const mailLink = 'rodrigoasonego@gmail.com'
     const linkedinLink = 'https://www.linkedin.com/in/rodrigo-sônego-2a9aa4211/'
 
-    const logoSize = 40
+    const logoSize = 35
 </script>
 
 <head>
@@ -18,8 +18,8 @@
 </head>
 
 <div class="bg-dark center-block">
-    <img src="https://pbs.twimg.com/profile_images/1293925081542995971/s2la3KS9_400x400.png" class="rounded-circle mx-auto img-responsive d-block" alt="..."
-    width="250px" height="250px">
+    <img src="https://pbs.twimg.com/profile_images/1293925081542995971/s2la3KS9_400x400.png" class="rounded-circle mx-auto img-responsive d-block profile-image" alt="..."
+    width="200px" height="200px">
     <!-- <img src={githubLogo} class="rounded-circle mx-auto img-responsive d-block" alt="..."
     width="250px" height="250px"> -->
 
@@ -63,6 +63,10 @@
 </div>
 
 <style>
+    .profile-image {
+        padding-top: 10px;
+    }
+
     /*CENTER COLUMN */
     .align-center {
         text-align: center;
@@ -76,11 +80,13 @@
 
     .icon-row {
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .title {
+        font-size: 3rem;
         margin: 10px;
-        font-family:  "Roboto", "Helvetica", "Arial", sans-serif;;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;;
         font-weight: 400;
     }
 </style>
