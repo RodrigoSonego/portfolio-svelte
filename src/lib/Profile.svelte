@@ -17,14 +17,14 @@
     <script src="https://kit.fontawesome.com/f006e1eac3.js" crossorigin="anonymous"></script>
 </head>
 
-<div class="bg-dark center-block header">
+<div class="bg-dark container-fluid d-flex header">
     <div class="align-self-center container-fluid">
         <div class="flex-row">
             <img src="https://pbs.twimg.com/profile_images/1293925081542995971/s2la3KS9_400x400.png" class="rounded-circle mx-auto img-responsive d-block profile-image" alt="..."
             width="200px" height="200px">
         </div>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <h1 class="text-light flexbox text-center title">
                     Rodrigo Sônego
@@ -52,10 +52,6 @@
                             width="{logoSize}px" height="{logoSize}pxpx">
                         </a>
                     </div>
-
-                <!-- <div class="col align-center"> <img style="width: 25%; height: 25%" src="https://image.ibb.co/ckA7ka/mr_marbles.png" alt="Mister Marbles head tilt"> </div>
-                <div class="col align-center"> <img style="width: 25%; height: 25%" src="https://image.ibb.co/bTMKyv/kermit.png" alt="Kermit the Dog"> </div>
-                <div class="col align-center"> <img style="width: 25%; height: 25%" src="https://image.ibb.co/ki8tQa/peach.png" alt="Peach posing magestically"> </div> -->
                 </div>
             </div>
         </div>
