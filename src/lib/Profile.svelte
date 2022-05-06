@@ -25,28 +25,28 @@
         </div>
 
         <div class="container-fluid">
-            <div class="row">
+            <div class="flex-row">
                 <h1 class="text-light flexbox text-center title">
                     Rodrigo Sônego
                 </h1>
             </div>
 
-            <div class="row">
-                <div class="center icon-row">
-                    <div class="col-lg-4 col-md-4 col-xs-4-thumb align-center">
+            <div class="container-fluid icon-row">
+                <div class="row align-center center d-flex">
+                    <div class="col-sm-4">
                         <a class="thumbnail" href={githubLink} target="_blank">
                             <img src={githubLogo} alt="Github" class="img-responsive"
                             width="{logoSize}px" height="{logoSize}px">
                         </a>
                     </div>
             
-                    <div class="col-lg-4 col-md-4 col-xs-4-thumb align-center">
+                    <div class="col-sm-4">
                         <a class="thumbnail" href="mailto:{mailLink}" target="_blank">
                             <img src={gmailLogo} alt="Email" class="img-responsive"
                             width="{logoSize}px" height="{logoSize}px">
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-xs-4-thumb align-center">
+                    <div class="col-sm-4">
                         <a class="thumbnail" href={linkedinLink} target="_blank">
                             <img src={linkedinLogo} alt="Linkedin" class="img-responsive"
                             width="{logoSize}px" height="{logoSize}pxpx">
@@ -89,13 +89,13 @@
     /*CENTER DIV*/
     .center {
         margin: 0 auto;
-        width: 25%;
+        width: 20%;
         display: flex;
+        min-width: 100px;
     }
 
     .icon-row {
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 25px;
     }
 
     .title {
