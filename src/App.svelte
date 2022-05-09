@@ -3,11 +3,13 @@
   import Counter from './lib/Counter.svelte'
   import Navbar from './lib/Navbar.svelte';
   import Profile from './lib/Profile.svelte';
+  import Portfolio from './lib/Portfolio.svelte';
 </script>
 
 <body class="bg-dark">
     <Navbar />
     <Profile />
+    <Portfolio />
 </body>
 
 <!-- <main>

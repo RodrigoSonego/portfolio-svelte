@@ -110,7 +110,7 @@
         padding-left: 24px;
         padding-right: 24px;    
         min-width: 600px;
-        margin-bottom: 20px;
+        margin-bottom: 3rem;
     }
 
     .about-info-container {
