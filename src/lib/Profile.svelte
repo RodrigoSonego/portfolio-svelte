@@ -43,7 +43,7 @@
                     <div class="col-sm-4">
                         <a class="thumbnail" href="mailto:{mailLink}" target="_blank">
                             <img src={gmailLogo} alt="Email" class="img-responsive"
-                            width="{logoSize}px" height="{logoSize}px">
+                            width="auto" height="{logoSize}px">
                         </a>
                     </div>
                     <div class="col-sm-4">
