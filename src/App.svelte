@@ -5,8 +5,10 @@
   import Profile from './lib/Profile.svelte';
 </script>
 
-<Navbar />
-<Profile />
+<body class="bg-dark">
+    <Navbar />
+    <Profile />
+</body>
 
 <!-- <main>
   <img src={logo} alt="Svelte Logo" />
