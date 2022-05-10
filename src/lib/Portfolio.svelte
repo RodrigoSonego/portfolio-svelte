@@ -2,10 +2,14 @@
 
 <script>
     import logoCiencias from '../assets/LogoCiencias.png'
-    import appStore from '../assets/appstore.png'
-    import googlePlay from '../assets/googleplay.png'
+    import logoCorpoHumano from '../assets/LogoCorpo.png'
+    import logoMatematica from '../assets/LogoMatematica.png'
 
+    import googlePlay from '../assets/googleplay.png'
+    
     const cienciasLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.Ciencia'
+    const matematicaLink = 'https://play.google.com/store/apps/details?id=br.com.lionstudios.matematicara'
+    const corpoHumanoLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.LCHRA'
 </script>
 
 <div class="bg-light about-container">
@@ -15,11 +19,12 @@
                 Meu Trabalho 
             </strong> 
     </h1>
+    <hr>
 
-    <div class="work-info-container row justify-items-start align-items-center">
+    <div class="work-info-container row align-items-center">
         <div class="col-3">
             <img src={logoCiencias} 
-            class="rounded-circle float-start app-image align-self-center" alt="..."
+            class="float-start app-image align-self-center" alt="..."
         width="auto" height="200">
         </div>
         <div class="col-9">
@@ -31,13 +36,61 @@
                 do conteúdo de Ciências do Ensino Fundamental
                 <br><br>
                 <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
+                <br>
                 <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
             </p>
-            <a href={cienciasLink}>
+            <a href={cienciasLink} target="_blank">
                 <img src={googlePlay} height="40px" width="auto" alt="Play Store">
             </a>
         </div>
-        
+    </div>
+
+    <div class="work-info-container row align-items-center">
+        <div class="col-9">
+            <h2>
+                <strong> Matemática RA </strong>
+            </h2>
+            <p>
+                Matemática RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
+                do conteúdo de Matemática do Ensino Fundamental
+                <br><br>
+                <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
+                <br>
+                <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
+            </p>
+            <a href={matematicaLink} target="_blank">
+                <img src={googlePlay} height="40px" width="auto" alt="Play Store">
+            </a>
+        </div>
+        <div class="col-3">
+            <img src={logoMatematica} 
+            class="float-end app-image-right align-self-center" alt="..."
+        width="auto" height="200">
+        </div>
+    </div>
+
+    <div class="work-info-container row align-items-center">
+        <div class="col-3">
+            <img src={logoCorpoHumano} 
+            class="float-start app-image align-self-center" alt="..."
+        width="auto" height="200">
+        </div>
+        <div class="col-9">
+            <h2>
+                <strong> Corpo Humano RA </strong>
+            </h2>
+            <p>
+                Corpo Humano RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
+                sobre o corpo humano do Ensino Fundamental
+                <br><br>
+                <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
+                <br>
+                <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
+            </p>
+            <a href={corpoHumanoLink} target="_blank">
+                <img src={googlePlay} height="40px" width="auto" alt="Play Store">
+            </a>
+        </div>
     </div>
 </div>
 
@@ -58,12 +111,15 @@
         font-size: 1.5rem;
         font-weight: 300;
 
-        margin-right: 5%;
-        margin-left: 5%;
+        margin-right: 3%;
+        margin-left: 3%;
     }
 
     .app-image {
         margin-right: 20px;
     }
 
+    .app-image-right {
+        margin-left: 20px;
+    }
 </style>
