@@ -8,9 +8,9 @@
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
 
             <div class="texto-navbar navbar-nav d-flex justify-content-lg-end me-2">
-                <a class="nav-link active" aria-current="page" href="#">Sobre</a>
-                <a class="nav-link active" href="#">Portfolio</a>
-                <a class="nav-link active" href="#">Contato</a>
+                <a class="nav-link active" aria-current="page" href=".">Sobre</a>
+                <a class="nav-link active" href=".">Portfolio</a>
+                <a class="nav-link active" href=".">Contato</a>
             </div>
         </div>
     </div>
@@ -27,7 +27,4 @@
         line-height: 1.6;
     }
 
-    .float-right {
-        float: right;
-    }
 </style>
