@@ -81,7 +81,7 @@
             </h2>
             <p>
                 Corpo Humano RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
-                sobre o corpo humano do Ensino Fundamental
+                sobre o corpo humano no Ensino Fundamental
                 <br><br>
                 <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
                 <br>
@@ -102,7 +102,8 @@
 
     .about-container {
         padding-left: 24px;
-        padding-right: 24px;    
+        padding-right: 24px;
+        padding-bottom: 5%;
         min-width: 600px;
     }
 

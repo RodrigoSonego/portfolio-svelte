@@ -4,12 +4,14 @@
   import Navbar from './lib/Navbar.svelte';
   import Profile from './lib/Profile.svelte';
   import Portfolio from './lib/Portfolio.svelte';
+  import Footer from './lib/Footer.svelte';
 </script>
 
 <body class="bg-dark">
     <Navbar />
     <Profile />
     <Portfolio />
+    <Footer />
 </body>
 
 <!-- <main>
