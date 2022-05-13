@@ -22,9 +22,9 @@
     <hr>
 
     <div class="work-info-container row align-items-center">
-        <div class="col-3">
+        <div class="col-3 d-flex justify-content-center">
             <img src={logoCiencias} 
-            class="float-start app-image align-self-center" alt="..."
+            class="app-image align-self-center" alt="..."
         width="auto" height="200">
         </div>
         <div class="col-9">
@@ -62,17 +62,17 @@
                 <img src={googlePlay} height="40px" width="auto" alt="Play Store">
             </a>
         </div>
-        <div class="col-3">
+        <div class="col-3 d-flex justify-content-center">
             <img src={logoMatematica} 
-            class="float-end app-image-right align-self-center" alt="..."
+            class="app-image-right" alt="..."
         width="auto" height="200">
         </div>
     </div>
 
     <div class="work-info-container row align-items-center">
-        <div class="col-3">
+        <div class="col-3 d-flex align-content-center justify-content-center">
             <img src={logoCorpoHumano} 
-            class="float-start app-image align-self-center" alt="..."
+            class="app-image" alt="..."
         width="auto" height="200">
         </div>
         <div class="col-9">
