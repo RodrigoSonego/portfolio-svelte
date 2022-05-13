@@ -6,7 +6,7 @@
 />
 
 <div class="footer text-light">
-    <div class="about-container">
+    <div class="about-container" id="contact">
         <h3>
             <strong>Contato</strong>
         </h3>
@@ -40,4 +40,5 @@
         padding: 5px;
         padding-left: 24px;
     }
+    
 </style>

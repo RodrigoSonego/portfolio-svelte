@@ -12,7 +12,7 @@
     const corpoHumanoLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.LCHRA'
 </script>
 
-<div class="bg-light about-container">
+<div class="bg-light about-container" id="portfolio">
     <p>
     <h1 class="flex-block text-center title" > 
             <strong>

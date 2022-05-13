@@ -58,7 +58,7 @@
     </div> 
 </div>
 
-<div class="bg-light about-container">
+<div class="bg-light about-container" id="about">
     <div class="about-info-container">
        <p> 
         <h1 class="flex-block text-left" > 
