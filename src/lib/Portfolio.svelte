@@ -37,7 +37,7 @@
     
     function hasEnteredViewport(element) {
         const rect = element.getBoundingClientRect();
-        const offset = rect.height/3;
+        const offset = rect.height/2; // considera no viewport a partir da metade do elemento
         
         return (
             rect.top >= 0 &&
@@ -70,7 +70,7 @@
             <hr>
         <div id="ciencias">
             {#if hasCienciasAppeared}
-                <div transition:fly="{{x: -500, duration: 3500}}"
+                <div transition:fly="{{x: -500, duration: 3000}}"
                  class="work-info-container row align-items-center">
                     <div class="col-3 d-flex justify-content-center">
                         <img src={logoCiencias} 
@@ -96,10 +96,10 @@
                 </div>       
             {/if}
         </div>
-        
+        <hr>
         <div id="matematica">
             {#if hasMatematicaAppeared}
-                <div transition:fly="{{x: 500, duration: 4000}}"
+                <div transition:fly="{{x: 500, duration: 3000}}"
                  class="work-info-container row align-items-center">
                     <div class="col-9">
                         <h2>
@@ -126,10 +126,10 @@
                 
             {/if}
         </div>
-        
+        <hr>
         <div id="corpohumano">
             {#if hasCorpoAppeared}
-                <div transition:fly="{{x: -500, duration: 5000}}"
+                <div transition:fly="{{x: -500, duration: 3000}}"
                 class="work-info-container row align-items-center">
                     <div class="col-3 d-flex align-content-center justify-content-center">
                         <img src={logoCorpoHumano} 
