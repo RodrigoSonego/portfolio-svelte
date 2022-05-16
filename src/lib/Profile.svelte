@@ -34,20 +34,20 @@
 
             <div class="container-fluid icon-row">
                 <div class="row align-center center d-flex">
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <a class="thumbnail" href={githubLink} target="_blank">
                             <img src={githubLogo} alt="Github" class="contact-icon img-responsive"
                             width="{logoSize}px" height="{logoSize}px">
                         </a>
                     </div>
             
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <a class="thumbnail contact-icon" href="mailto:{mailLink}" target="_blank">
                             <img src={gmailLogo} alt="Email" class="contact-icon img-responsive"
                             width="auto" height="{logoSize}px">
                         </a>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <a class="thumbnail contact-icon" href={linkedinLink} target="_blank">
                             <img src={linkedinLogo} alt="Linkedin" class="contact-icon img-responsive"
                             width="{logoSize}px" height="{logoSize}pxpx">
