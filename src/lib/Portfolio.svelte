@@ -26,13 +26,7 @@
         cienciasSection = document.getElementById('ciencias')
         matSection = document.getElementById('matematica')
         corpoSection = document.getElementById('corpohumano')
-
-        console.log(!cienciasSection)
-        console.log(!matSection)
-        console.log(!corpoSection)
     });
-
-    // TODO: Criar uma variavel pra ver se tal div entrou no frame
     
     
     function hasEnteredViewport(element) {
@@ -57,10 +51,12 @@
 
     document.addEventListener('scroll', checkIfElementsEnteredViewport);
 
+    console.log(window.innerWidth)
+
 </script>
 
 <div class="bg-light d-flex justify-content-center" id="portfolio">
-    <div class="about-container">
+    <div class="about-container container">
         <p>
             <h1 class="flex-block text-center title" > 
                     <strong>
@@ -72,12 +68,12 @@
             {#if hasCienciasAppeared}
                 <div transition:fly="{{x: -500, duration: 3000}}"
                  class="work-info-container row align-items-center">
-                    <div class="col-3 d-flex justify-content-center">
+                    <div class="col-lg-3 d-flex justify-content-center">
                         <img src={logoCiencias} 
                         class="app-image align-self-center" alt="..."
                     width="auto" height="200">
                     </div>
-                    <div class="col-9">
+                    <div class="col-lg-9">
                         <h2>
                             <strong> Ciências RA </strong>
                         </h2>
@@ -101,7 +97,12 @@
             {#if hasMatematicaAppeared}
                 <div transition:fly="{{x: 500, duration: 3000}}"
                  class="work-info-container row align-items-center">
-                    <div class="col-9">
+                    <div class="col-lg-3 d-flex justify-content-center">
+                        <img src={logoMatematica} 
+                        class="app-image" alt="..."
+                    width="auto" height="200">
+                    </div>
+                    <div class="col-lg-9">
                         <h2>
                             <strong> Matemática RA </strong>
                         </h2>
@@ -117,11 +118,6 @@
                             <img src={googlePlay} height="40px" width="auto" alt="Play Store">
                         </a>
                     </div>
-                    <div class="col-3 d-flex justify-content-center">
-                        <img src={logoMatematica} 
-                        class="app-image-right" alt="..."
-                    width="auto" height="200">
-                    </div>
                 </div>
                 
             {/if}
@@ -131,12 +127,12 @@
             {#if hasCorpoAppeared}
                 <div transition:fly="{{x: -500, duration: 3000}}"
                 class="work-info-container row align-items-center">
-                    <div class="col-3 d-flex align-content-center justify-content-center">
+                    <div class="col-lg-3 d-flex align-content-center justify-content-center">
                         <img src={logoCorpoHumano} 
                         class="app-image" alt="..."
                     width="auto" height="200">
                     </div>
-                    <div class="col-9">
+                    <div class="col-lg-9">
                         <h2>
                             <strong> Corpo Humano RA </strong>
                         </h2>
@@ -165,12 +161,13 @@
         margin-bottom: 20px;
     }
 
-    .about-container {
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-bottom: 5%;
-        min-width: 600px;
-        max-width: 75%;
+    @media (min-width: 600px){
+        .about-container {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 5%;
+            max-width: 85%;
+        }
     }
 
     .work-info-container {
@@ -183,11 +180,7 @@
     }
 
     .app-image {
-        margin-right: 20px;
-    }
-
-    .app-image-right {
-        margin-left: 20px;
+        margin: 20px;
     }
 
     .play-store-btn:hover {
