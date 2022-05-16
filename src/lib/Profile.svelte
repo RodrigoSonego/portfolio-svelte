@@ -5,6 +5,7 @@
     import githubLogo from "../assets/github-logo.png"
     import gmailLogo from "../assets/gmail-logo.png"
     import linkedinLogo from "../assets/linkedin-logo.png"
+    import euFoto from "../assets/eu.jpg"
 
     const githubLink = 'https://github.com/RodrigoSonego'
     const mailLink = 'rodrigoasonego@gmail.com'
@@ -20,7 +21,7 @@
 <div class="bg-dark container-fluid d-flex header">
     <div class="align-self-center container-fluid">
         <div class="flex-row">
-            <img src="https://pbs.twimg.com/profile_images/1293925081542995971/s2la3KS9_400x400.png" class="rounded-circle mx-auto img-responsive d-block profile-image" alt="..."
+            <img src={euFoto} class="rounded-circle mx-auto img-responsive d-block profile-image" alt="..."
             width="200px" height="200px">
         </div>
 
@@ -35,20 +36,20 @@
                 <div class="row align-center center d-flex">
                     <div class="col-sm-4">
                         <a class="thumbnail" href={githubLink} target="_blank">
-                            <img src={githubLogo} alt="Github" class="img-responsive"
+                            <img src={githubLogo} alt="Github" class="contact-icon img-responsive"
                             width="{logoSize}px" height="{logoSize}px">
                         </a>
                     </div>
             
                     <div class="col-sm-4">
-                        <a class="thumbnail" href="mailto:{mailLink}" target="_blank">
-                            <img src={gmailLogo} alt="Email" class="img-responsive"
+                        <a class="thumbnail contact-icon" href="mailto:{mailLink}" target="_blank">
+                            <img src={gmailLogo} alt="Email" class="contact-icon img-responsive"
                             width="auto" height="{logoSize}px">
                         </a>
                     </div>
                     <div class="col-sm-4">
-                        <a class="thumbnail" href={linkedinLink} target="_blank">
-                            <img src={linkedinLogo} alt="Linkedin" class="img-responsive"
+                        <a class="thumbnail contact-icon" href={linkedinLink} target="_blank">
+                            <img src={linkedinLogo} alt="Linkedin" class="contact-icon img-responsive"
                             width="{logoSize}px" height="{logoSize}pxpx">
                         </a>
                     </div>
@@ -105,13 +106,14 @@
         font-weight: 400;
     }
 
-    /* @media (min-width: 600px) */
-    .about-container {
-        padding-left: 24px;
-        padding-right: 24px;    
-        min-width: 600px;
-        margin-bottom: 3rem;
-    }
+     @media (min-width: 600px){
+         .about-container {
+             padding-left: 24px;
+             padding-right: 24px;    
+             /* min-width: 600px; */
+             margin-bottom: 3rem;
+         }
+     }
 
     .about-info-container {
         padding: 1rem 0;
@@ -124,5 +126,14 @@
 
     .header {
         min-height: 500px;
+    }
+
+    .contact-icon {
+        transform: scale(1);
+        transition: transform .2s;
+    }
+
+    .contact-icon:hover {
+        transform: scale(1.5);
     }
 </style>
