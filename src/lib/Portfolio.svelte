@@ -68,12 +68,12 @@
             {#if hasCienciasAppeared}
                 <div transition:fly="{{x: -500, duration: 3000}}"
                  class="work-info-container row align-items-center">
-                    <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="col-xl-3 d-flex justify-content-center">
                         <img src={logoCiencias} 
                         class="app-image align-self-center" alt="..."
                     width="auto" height="200">
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-xl-9">
                         <h2>
                             <strong> Ciências RA </strong>
                         </h2>
@@ -85,8 +85,8 @@
                             <br>
                             <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
                         </p>
-                        <a class="play-store-btn" href={cienciasLink} target="_blank">
-                            <img src={googlePlay} height="40px" width="auto" alt="Play Store">
+                        <a href={cienciasLink} target="_blank">
+                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
                         </a>
                     </div>
                 </div>       
@@ -97,12 +97,12 @@
             {#if hasMatematicaAppeared}
                 <div transition:fly="{{x: 500, duration: 3000}}"
                  class="work-info-container row align-items-center">
-                    <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="col-xl-3 d-flex justify-content-center">
                         <img src={logoMatematica} 
                         class="app-image" alt="..."
                     width="auto" height="200">
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-xl-9">
                         <h2>
                             <strong> Matemática RA </strong>
                         </h2>
@@ -114,8 +114,8 @@
                             <br>
                             <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
                         </p>
-                        <a class="play-store-btn" href={matematicaLink} target="_blank">
-                            <img src={googlePlay} height="40px" width="auto" alt="Play Store">
+                        <a href={matematicaLink} target="_blank">
+                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
                         </a>
                     </div>
                 </div>
@@ -127,12 +127,12 @@
             {#if hasCorpoAppeared}
                 <div transition:fly="{{x: -500, duration: 3000}}"
                 class="work-info-container row align-items-center">
-                    <div class="col-lg-3 d-flex align-content-center justify-content-center">
+                    <div class="col-xl-3 d-flex align-content-center justify-content-center">
                         <img src={logoCorpoHumano} 
                         class="app-image" alt="..."
                     width="auto" height="200">
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-xl-9">
                         <h2>
                             <strong> Corpo Humano RA </strong>
                         </h2>
@@ -144,8 +144,8 @@
                             <br>
                             <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
                         </p>
-                        <a class="play-store-btn" href={corpoHumanoLink} target="_blank">
-                            <img src={googlePlay} height="40px" width="auto" alt="Play Store">
+                        <a href={corpoHumanoLink} target="_blank">
+                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
                         </a>
                     </div>
                 </div>
@@ -182,8 +182,14 @@
     .app-image {
         margin: 20px;
     }
+    
+    .play-store-btn {
+        transform: scale(1);
+        transition: transform .2s;
+    }
 
     .play-store-btn:hover {
-        opacity: 75%;
+        transform: scale(1.2);
+        /* opacity: 75%; */
     }
 </style>
