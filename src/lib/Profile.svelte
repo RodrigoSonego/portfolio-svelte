@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 <script>
+    import { onMount } from 'svelte/internal';
+    import { fade } from 'svelte/transition'
+
     import githubLogo from "../assets/github-logo.png"
     import gmailLogo from "../assets/gmail-logo.png"
     import linkedinLogo from "../assets/linkedin-logo.png"
@@ -12,6 +15,10 @@
     const linkedinLink = 'https://www.linkedin.com/in/rodrigo-sônego-2a9aa4211/'
 
     const logoSize = 30
+
+    let isMounted = false;
+
+    onMount(() => { isMounted = true; });
 </script>
 
 <head>
@@ -32,24 +39,24 @@
                 </h1>
             </div>
 
-            <div class="container-fluid icon-row">
-                <div class="row align-center center d-flex">
+            <div class="container icon-row jusitfy-self-center">
+                <div class="row center">
                     <div class="col-4">
-                        <a class="thumbnail" href={githubLink} target="_blank">
-                            <img src={githubLogo} alt="Github" class="contact-icon img-responsive"
+                        <a class="" href={githubLink} target="_blank">
+                            <img src={githubLogo} alt="Github" class="contact-icon justify-self-center"
                             width="{logoSize}px" height="{logoSize}px">
                         </a>
                     </div>
             
                     <div class="col-4">
-                        <a class="thumbnail contact-icon" href="mailto:{mailLink}" target="_blank">
-                            <img src={gmailLogo} alt="Email" class="contact-icon img-responsive"
+                        <a class="" href="mailto:{mailLink}" target="_blank">
+                            <img src={gmailLogo} alt="Email" class="contact-icon justify-self-center"
                             width="auto" height="{logoSize}px">
                         </a>
                     </div>
                     <div class="col-4">
-                        <a class="thumbnail contact-icon" href={linkedinLink} target="_blank">
-                            <img src={linkedinLogo} alt="Linkedin" class="contact-icon img-responsive"
+                        <a class="" href={linkedinLink} target="_blank">
+                            <img src={linkedinLogo} alt="Linkedin" class="contact-icon justify-self-center"
                             width="{logoSize}px" height="{logoSize}pxpx">
                         </a>
                     </div>
@@ -58,41 +65,36 @@
         </div>
     </div> 
 </div>
-
-<div class="bg-light about-container" id="about">
-    <div class="about-info-container">
-       <p> 
-        <h1 class="flex-block text-left" > 
-          <strong>
-            Olá! 
-          </strong> 
-        </h1>
-       <p class="flex-block text-left"> 
-            Meu nome é Rodrigo Sônego.
-            <br>
-            Sou acadêmico do curso de <strong>Ciência da computação</strong>, com experiência em
-            <strong>desenvolvimento de jogos, sistemas</strong> e <strong>aplicações de reliadade aumentada</strong>.
-            <br>
-            Sinta-se à vontade para entrar em contato ou conferir meu trabalho abaixo
-       </p>
+{#if isMounted}
+    <div class="bg-light about-container" id="about">
+        <div class="about-info-container">
+        <p> 
+            <h1 transition:fade="{{duration: 2000}}" class="flex-block text-left" > 
+            <strong>
+                Olá! 
+            </strong> 
+            </h1>
+        <p transition:fade="{{duration: 1000}}" class="flex-block text-left"> 
+                Meu nome é Rodrigo Sônego.
+                <br>
+                Sou acadêmico do curso de <strong>Ciência da computação</strong>, com experiência em
+                <strong>desenvolvimento de jogos, sistemas</strong> e <strong>aplicações de reliadade aumentada</strong>.
+                <br>
+                Sinta-se à vontade para entrar em contato ou conferir meu trabalho abaixo
+        </p>
+        </div>
     </div>
-</div>
+{/if}
 
 <style>
     .profile-image {
         padding-top: 10px;
     }
 
-    /*CENTER COLUMN */
-    .align-center {
-        text-align: center;
-    }
-    /*CENTER DIV*/
     .center {
         margin: 0 auto;
         width: 20%;
         display: flex;
-        min-width: 100px;
     }
 
     .icon-row {

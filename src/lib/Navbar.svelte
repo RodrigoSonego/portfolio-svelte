@@ -2,7 +2,7 @@
 
 <nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-dark text-light">
     <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1 title texto-navbar"> Rodrigo Sonego </span>
+        <span class="navbar-brand mb-0 h1 title texto-navbar"> Rodrigo Sônego </span>
         <div class="collapse navbar-collapse">
             <!-- gambiarra com ul vazia aqui só pra deixar os itens pra esquerda -->
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;"></ul>
@@ -73,12 +73,14 @@
         let ch = document.documentElement.clientHeight
 
         let sectionIndex = (st1 + st2) / (sh - ch) * 3;
+
+        console.log(sectionIndex)
         if(sectionIndex >= 0 && sectionIndex <= 1.3) {
             isAboutOnFrame = true;
             isPortfolioOnFrame = false;
             isContactOnFrame = false;
         }
-        else if (sectionIndex > 1.3 && sectionIndex <= 3) {
+        else if (sectionIndex > 1 && sectionIndex <= 2.9) {
             isAboutOnFrame = false;
             isPortfolioOnFrame = true;
             isContactOnFrame = false;
