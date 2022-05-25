@@ -7,25 +7,35 @@
     import logoCiencias from '../assets/LogoCiencias.png'
     import logoCorpoHumano from '../assets/LogoCorpo.png'
     import logoMatematica from '../assets/LogoMatematica.png'
+    import logoGeografia from '../assets/LogoGeografia.png'
+    import logoUniverso from '../assets/LogoUniverso.png'
 
     import googlePlay from '../assets/googleplay.png'
     
     const cienciasLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.Ciencia'
     const matematicaLink = 'https://play.google.com/store/apps/details?id=br.com.lionstudios.matematicara'
     const corpoHumanoLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.LCHRA'
+    const geografiaLink = 'https://play.google.com/store/apps/details?id=com.DefaultCompany.Geografia'
+    const universoLink = 'https://play.google.com/store/apps/details?id=com.Lion.Universo'
 
     let cienciasSection;
     let matSection;
     let corpoSection;
+    let geoSection;
+    let universoSection;
 
     let hasCienciasAppeared = false;
     let hasMatematicaAppeared = false;
     let hasCorpoAppeared = false;
+    let hasGeoAppeared = false;
+    let hasUniversoAppeared = false;
 
     onMount(() => {
         cienciasSection = document.getElementById('ciencias')
         matSection = document.getElementById('matematica')
         corpoSection = document.getElementById('corpohumano')
+        geoSection = document.getElementById('geografia')
+        universoSection = document.getElementById('universo')
     });
     
     
@@ -46,7 +56,8 @@
         if(hasCienciasAppeared === false){ hasCienciasAppeared = hasEnteredViewport(cienciasSection); }
         if(hasMatematicaAppeared ===false){ hasMatematicaAppeared = hasEnteredViewport(matSection); }
         if(hasCorpoAppeared ===false){ hasCorpoAppeared = hasEnteredViewport(corpoSection); }
-
+        if(hasGeoAppeared ===false){ hasGeoAppeared = hasEnteredViewport(geoSection); }
+        if(hasUniversoAppeared ===false){ hasUniversoAppeared = hasEnteredViewport(universoSection); }
     }
 
     document.addEventListener('scroll', checkIfElementsEnteredViewport);
@@ -149,6 +160,64 @@
                         </a>
                     </div>
                 </div>
+            {/if}
+        </div>
+        <hr>
+        <div id="geografia">
+            {#if hasGeoAppeared}
+            <div transition:fly="{{x: 500, duration: 3000}}"
+                class="work-info-container row align-items-center">
+                    <div class="col-xl-3 d-flex align-content-center justify-content-center">
+                        <img src={logoGeografia} 
+                        class="app-image" alt="..."
+                    width="auto" height="200">
+                    </div>
+                    <div class="col-xl-9">
+                        <h2>
+                            <strong> Geografia RA </strong>
+                        </h2>
+                        <p>
+                            Geografia RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
+                             de Geografia no Ensino Fundamental
+                            <br><br>
+                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
+                            <br>
+                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
+                        </p>
+                        <a href={geografiaLink} target="_blank">
+                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
+                        </a>
+                    </div>
+            </div>
+            {/if}
+        </div>
+        <hr>
+        <div id="universo">
+            {#if hasUniversoAppeared}
+            <div transition:fly="{{x: -500, duration: 3000}}"
+                class="work-info-container row align-items-center">
+                    <div class="col-xl-3 d-flex align-content-center justify-content-center">
+                        <img src={logoUniverso} 
+                        class="app-image" alt="..."
+                    width="auto" height="200">
+                    </div>
+                    <div class="col-xl-9">
+                        <h2>
+                            <strong> Universo RA </strong>
+                        </h2>
+                        <p>
+                            Universo RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
+                            sobre o universo no Ensino Fundamental
+                            <br><br>
+                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
+                            <br>
+                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
+                        </p>
+                        <a href={universoLink} target="_blank">
+                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
+                        </a>
+                    </div>
+            </div>
             {/if}
         </div>
     </div>
