@@ -9,7 +9,7 @@
     <div class="about-container" id="contact">
         
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <h3>
                     <strong>Experiência com tecnologias</strong>
                 </h3>
@@ -28,6 +28,10 @@
                         </div>
                     </div>
                 </ul>
+            </div>
+
+            <div class="col-md-1">
+                <div class="bar"></div>
             </div>
 
             <div class="col-md-6">
@@ -83,4 +87,10 @@
         color: rgb(112, 112, 151);
     }
     
+    .bar {
+        border-left: 1px solid white;
+        height: 100%;
+        left: 50%;
+        top: 0; 
+    }
 </style>
