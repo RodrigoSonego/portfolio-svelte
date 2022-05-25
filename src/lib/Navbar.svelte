@@ -75,12 +75,12 @@
         let sectionIndex = (st1 + st2) / (sh - ch) * 3;
 
         console.log(sectionIndex)
-        if(sectionIndex >= 0 && sectionIndex <= 1.3) {
+        if(sectionIndex >= 0 && sectionIndex <= 0.68) {
             isAboutOnFrame = true;
             isPortfolioOnFrame = false;
             isContactOnFrame = false;
         }
-        else if (sectionIndex > 1 && sectionIndex <= 2.9) {
+        else if (sectionIndex > 0.68 && sectionIndex <= 2.9) {
             isAboutOnFrame = false;
             isPortfolioOnFrame = true;
             isContactOnFrame = false;
