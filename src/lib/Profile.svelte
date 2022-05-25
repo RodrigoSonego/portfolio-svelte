@@ -69,7 +69,7 @@
     <div class="bg-light about-container" id="about">
         <div class="about-info-container">
         <p> 
-            <h1 transition:fade="{{duration: 2000}}" class="flex-block text-left" > 
+            <h1 transition:fade="{{duration: 1000}}" class="flex-block text-left" > 
             <strong>
                 Olá! 
             </strong> 
