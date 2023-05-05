@@ -1,264 +1,172 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 <script>
-    import { fade, fly } from 'svelte/transition'
-    import {onMount} from 'svelte'
+	import { fade, fly } from "svelte/transition";
+	import { onMount } from "svelte";
 
-    import logoCiencias from '../assets/LogoCiencias.png'
-    import logoCorpoHumano from '../assets/LogoCorpo.png'
-    import logoMatematica from '../assets/LogoMatematica.png'
-    import logoGeografia from '../assets/LogoGeografia.png'
-    import logoUniverso from '../assets/LogoUniverso.png'
+	import logoCiencias from "../assets/LogoCiencias.png";
+	import logoCorpoHumano from "../assets/LogoCorpo.png";
+	import logoMatematica from "../assets/LogoMatematica.png";
+	import logoGeografia from "../assets/LogoGeografia.png";
+	import logoUniverso from "../assets/LogoUniverso.png";
 
-    import googlePlay from '../assets/googleplay.png'
-    
-    const cienciasLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.Ciencia'
-    const matematicaLink = 'https://play.google.com/store/apps/details?id=br.com.lionstudios.matematicara'
-    const corpoHumanoLink = 'https://play.google.com/store/apps/details?id=com.LionStudios.LCHRA'
-    const geografiaLink = 'https://play.google.com/store/apps/details?id=com.DefaultCompany.Geografia'
-    const universoLink = 'https://play.google.com/store/apps/details?id=com.Lion.Universo'
+	import googlePlay from "../assets/googleplay.png";
+	import CollapsibleSection from "./CollapsibleSection.svelte";
 
-    let cienciasSection;
-    let matSection;
-    let corpoSection;
-    let geoSection;
-    let universoSection;
+	const cienciasLink =
+		"https://play.google.com/store/apps/details?id=com.LionStudios.Ciencia";
+	const matematicaLink =
+		"https://play.google.com/store/apps/details?id=br.com.lionstudios.matematicara";
+	const corpoHumanoLink =
+		"https://play.google.com/store/apps/details?id=com.LionStudios.LCHRA";
+	const geografiaLink =
+		"https://play.google.com/store/apps/details?id=com.DefaultCompany.Geografia";
+	const universoLink =
+		"https://play.google.com/store/apps/details?id=com.Lion.Universo";
 
-    let hasCienciasAppeared = false;
-    let hasMatematicaAppeared = false;
-    let hasCorpoAppeared = false;
-    let hasGeoAppeared = false;
-    let hasUniversoAppeared = false;
+	let cienciasSection;
+	let matSection;
+	let corpoSection;
+	let geoSection;
+	let universoSection;
 
-    onMount(() => {
-        cienciasSection = document.getElementById('ciencias')
-        matSection = document.getElementById('matematica')
-        corpoSection = document.getElementById('corpohumano')
-        geoSection = document.getElementById('geografia')
-        universoSection = document.getElementById('universo')
-    });
-    
-    
-    function hasEnteredViewport(element) {
-        const rect = element.getBoundingClientRect();
-        const offset = rect.height/2; // considera no viewport a partir da metade do elemento
-        
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= ((window.innerHeight + offset) || document.documentElement.clientHeight + offset) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );        
-    }
+	let hasCienciasAppeared = false;
+	let hasMatematicaAppeared = false;
+	let hasCorpoAppeared = false;
+	let hasGeoAppeared = false;
+	let hasUniversoAppeared = false;
 
-    function checkIfElementsEnteredViewport()
-    {
-        if(hasCienciasAppeared === false){ hasCienciasAppeared = hasEnteredViewport(cienciasSection); }
-        if(hasMatematicaAppeared ===false){ hasMatematicaAppeared = hasEnteredViewport(matSection); }
-        if(hasCorpoAppeared ===false){ hasCorpoAppeared = hasEnteredViewport(corpoSection); }
-        if(hasGeoAppeared ===false){ hasGeoAppeared = hasEnteredViewport(geoSection); }
-        if(hasUniversoAppeared ===false){ hasUniversoAppeared = hasEnteredViewport(universoSection); }
-    }
+	onMount(() => {
+		cienciasSection = document.getElementById("ciencias");
+		matSection = document.getElementById("matematica");
+		corpoSection = document.getElementById("corpohumano");
+		geoSection = document.getElementById("geografia");
+		universoSection = document.getElementById("universo");
+	});
 
-    document.addEventListener('scroll', checkIfElementsEnteredViewport);
+	function hasEnteredViewport(element) {
+		const rect = element.getBoundingClientRect();
+		const offset = rect.height / 2; // considera no viewport a partir da metade do elemento
 
-    console.log(window.innerWidth)
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <=
+				(window.innerHeight + offset ||
+					document.documentElement.clientHeight + offset) &&
+			rect.right <=
+				(window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
 
+	function checkIfElementsEnteredViewport() {
+		if (hasCienciasAppeared === false) {
+			hasCienciasAppeared = hasEnteredViewport(cienciasSection);
+		}
+		if (hasMatematicaAppeared === false) {
+			hasMatematicaAppeared = hasEnteredViewport(matSection);
+		}
+		if (hasCorpoAppeared === false) {
+			hasCorpoAppeared = hasEnteredViewport(corpoSection);
+		}
+		if (hasGeoAppeared === false) {
+			hasGeoAppeared = hasEnteredViewport(geoSection);
+		}
+		if (hasUniversoAppeared === false) {
+			hasUniversoAppeared = hasEnteredViewport(universoSection);
+		}
+	}
+
+	document.addEventListener("scroll", checkIfElementsEnteredViewport);
+
+	console.log(window.innerWidth);
 </script>
 
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous"
+/>
+
 <div class="bg-light d-flex justify-content-center" id="portfolio">
-    <div class="about-container container">
-        <p>
-            <h1 class="flex-block text-center title" > 
-                    <strong>
-                        Meu Trabalho 
-                    </strong> 
-            </h1>
-            <hr>
-        <div id="ciencias">
-            {#if hasCienciasAppeared}
-                <div transition:fly="{{x: -500, duration: 3000}}"
-                 class="work-info-container row align-items-center">
-                    <div class="col-xl-3 d-flex justify-content-center">
-                        <img src={logoCiencias} 
-                        class="app-image align-self-center" alt="..."
-                    width="auto" height="200">
-                    </div>
-                    <div class="col-xl-9">
-                        <h2>
-                            <strong> Ciências RA </strong>
-                        </h2>
-                        <p>
-                            Ciências RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
-                            do conteúdo de Ciências do Ensino Fundamental
-                            <br><br>
-                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
-                            <br>
-                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
-                        </p>
-                        <a href={cienciasLink} target="_blank">
-                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
-                        </a>
-                    </div>
-                </div>       
-            {/if}
-        </div>
-        <hr>
-        <div id="matematica">
-            {#if hasMatematicaAppeared}
-                <div transition:fly="{{x: 500, duration: 3000}}"
-                 class="work-info-container row align-items-center">
-                    <div class="col-xl-3 d-flex justify-content-center">
-                        <img src={logoMatematica} 
-                        class="app-image" alt="..."
-                    width="auto" height="200">
-                    </div>
-                    <div class="col-xl-9">
-                        <h2>
-                            <strong> Matemática RA </strong>
-                        </h2>
-                        <p>
-                            Matemática RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
-                            do conteúdo de Matemática do Ensino Fundamental
-                            <br><br>
-                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
-                            <br>
-                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
-                        </p>
-                        <a href={matematicaLink} target="_blank">
-                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
-                        </a>
-                    </div>
-                </div>
-                
-            {/if}
-        </div>
-        <hr>
-        <div id="corpohumano">
-            {#if hasCorpoAppeared}
-                <div transition:fly="{{x: -500, duration: 3000}}"
-                class="work-info-container row align-items-center">
-                    <div class="col-xl-3 d-flex align-content-center justify-content-center">
-                        <img src={logoCorpoHumano} 
-                        class="app-image" alt="..."
-                    width="auto" height="200">
-                    </div>
-                    <div class="col-xl-9">
-                        <h2>
-                            <strong> Corpo Humano RA </strong>
-                        </h2>
-                        <p>
-                            Corpo Humano RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
-                            sobre o corpo humano no Ensino Fundamental
-                            <br><br>
-                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
-                            <br>
-                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
-                        </p>
-                        <a href={corpoHumanoLink} target="_blank">
-                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
-                        </a>
-                    </div>
-                </div>
-            {/if}
-        </div>
-        <hr>
-        <div id="geografia">
-            {#if hasGeoAppeared}
-            <div transition:fly="{{x: 500, duration: 3000}}"
-                class="work-info-container row align-items-center">
-                    <div class="col-xl-3 d-flex align-content-center justify-content-center">
-                        <img src={logoGeografia} 
-                        class="app-image" alt="..."
-                    width="auto" height="200">
-                    </div>
-                    <div class="col-xl-9">
-                        <h2>
-                            <strong> Geografia RA </strong>
-                        </h2>
-                        <p>
-                            Geografia RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
-                             de Geografia no Ensino Fundamental
-                            <br><br>
-                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
-                            <br>
-                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
-                        </p>
-                        <a href={geografiaLink} target="_blank">
-                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
-                        </a>
-                    </div>
-            </div>
-            {/if}
-        </div>
-        <hr>
-        <div id="universo">
-            {#if hasUniversoAppeared}
-            <div transition:fly="{{x: -500, duration: 3000}}"
-                class="work-info-container row align-items-center">
-                    <div class="col-xl-3 d-flex align-content-center justify-content-center">
-                        <img src={logoUniverso} 
-                        class="app-image" alt="..."
-                    width="auto" height="200">
-                    </div>
-                    <div class="col-xl-9">
-                        <h2>
-                            <strong> Universo RA </strong>
-                        </h2>
-                        <p>
-                            Universo RA é um aplicativo de realidade aumentada usado para auxiliar no aprendizado
-                            sobre o universo no Ensino Fundamental
-                            <br><br>
-                            <strong>Tecnologias usadas:</strong> Unity, C#(.NET), EasyAR SDK
-                            <br>
-                            <strong>Responsabilidades:</strong> Desenvolvimento de novas cenas, implementação de UI responsiva, publicação para Android
-                        </p>
-                        <a href={universoLink} target="_blank">
-                            <img class="play-store-btn" src={googlePlay} height="40px" width="auto" alt="Play Store">
-                        </a>
-                    </div>
-            </div>
-            {/if}
-        </div>
-    </div>
-    
+	<div class="about-container container">
+		<p />
+		<h1 class="flex-block text-center title">
+			<strong> Meu Trabalho </strong>
+		</h1>
+		<hr />
+		<div id="ciencias">
+			<CollapsibleSection headerText="Ciências RA" iconSrc={logoCiencias}>
+				<div class="work-info-container">
+					<h3>Sobre</h3>
+					<p>
+						Ciências RA é um aplicativo de realidade aumentada usado para
+						auxiliar no aprendizado do conteúdo de Ciências do Ensino Fundamental
+					</p>
+					<h3>Tecnologias usadas</h3>
+						<ul>
+							<li>Unity</li>
+							<li>C# (.NET)</li>
+							<li>EasyAR SDK</li>
+						</ul>
+
+					<h3>Responsabilidades</h3> 
+						<ul>
+							<li>Desenvolvimento de novas cenas</li>
+							<li>Implementação de UI responsiva</li>
+							<li>Publicação para Android</li>
+						</ul>
+
+					<a href={cienciasLink} target="_blank">
+						<img
+							class="play-store-btn"
+							src={googlePlay}
+							height="50px"
+							width="auto"
+							alt="Play Store"
+						/>
+					</a>
+				</div>
+			</CollapsibleSection>
+		</div>
+		<hr />
+	</div>
 </div>
 
 <style>
-    .title {
-        padding-top: 20px;
-        margin-bottom: 20px;
-    }
+	.title {
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
 
-    @media (min-width: 600px){
-        .about-container {
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-bottom: 5%;
-            max-width: 85%;
-        }
-    }
+	@media (min-width: 600px) {
+		.about-container {
+			padding-left: 24px;
+			padding-right: 24px;
+			padding-bottom: 5%;
+			max-width: 85%;
+		}
+	}
 
-    .work-info-container {
-        padding: 1rem 0;
-        font-size: 1.5rem;
-        font-weight: 300;
+	.work-info-container {
+		padding: 1rem 0;
+		font-size: 1.3rem;
+		font-weight: 400;
 
-        margin-right: 3%;
-        margin-left: 3%;
-    }
+		margin-right: 3%;
+		margin-left: 3%;
+	}
 
-    .app-image {
-        margin: 20px;
-    }
-    
-    .play-store-btn {
-        transform: scale(1);
-        transition: transform .2s;
-    }
+	.play-store-btn {
+		transform: scale(1);
+		transition: transform 0.2s;
+	}
 
-    .play-store-btn:hover {
-        transform: scale(1.2);
-        /* opacity: 75%; */
-    }
+	.play-store-btn:hover {
+		transform: scale(1.2);
+		/* opacity: 75%; */
+	}
+
+	p {
+		padding-left: 1.5rem;
+	}
 </style>
