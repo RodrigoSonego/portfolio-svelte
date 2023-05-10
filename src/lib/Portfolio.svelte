@@ -7,9 +7,16 @@
 	import logoMatematica from "../assets/LogoMatematica.png";
 	import logoGeografia from "../assets/LogoGeografia.png";
 	import logoUniverso from "../assets/LogoUniverso.png";
+	import logoDicestDungeon from "../assets/dicestDungeon.png"
 
 	import googlePlay from "../assets/googleplay.png";
+	import itchButton from "../assets/itch.png";
+	import githubButton from "../assets/github_avail.png";
+
+	import dicestPreview from "../assets/dicestDungeon.gif"
+
 	import CollapsibleSection from "./CollapsibleSection.svelte";
+    import PublicationButton from "./PublicationButton.svelte";
 
 	const cienciasLink =
 		"https://play.google.com/store/apps/details?id=com.LionStudios.Ciencia";
@@ -21,6 +28,11 @@
 		"https://play.google.com/store/apps/details?id=com.DefaultCompany.Geografia";
 	const universoLink =
 		"https://play.google.com/store/apps/details?id=com.Lion.Universo";
+	const dicestItchLink = 
+		"https://fufumiga.itch.io/dicest-dungeon";
+	const dicestGitLink = 
+		"https://github.com/RodrigoSonego/dicest-dungeon";
+
 
 	let cienciasSection;
 	let matSection;
@@ -116,19 +128,31 @@
 							<li>Publicação para Android</li>
 						</ul>
 
-					<a href={cienciasLink} target="_blank">
-						<img
-							class="play-store-btn"
-							src={googlePlay}
-							height="50px"
-							width="auto"
-							alt="Play Store"
-						/>
-					</a>
+					<PublicationButton imgSrc={googlePlay} publicationUrl={cienciasLink} />
 				</div>
 			</CollapsibleSection>
 		</div>
 		<hr />
+		<div id="dicestDungeon">
+			<CollapsibleSection headerText="Dicest Dungeon" iconSrc={logoDicestDungeon}>
+				<div class="work-info-container">
+					<h3>Sobre</h3>
+					<p>
+						Um jogo de combate baseado em turnos feito em 48 horas como entrada para a
+						GMTK Game Jam 2022, com o tema de "Roll of The Dice".
+						<br>
+						Baseado em Darkest Dungeon, o jogador deve andar pelo cassino e lutar contra
+						os inimigos em batalhas por turno rolando diferentes dados para determinar o dano causado.
+						<br>
+						Arte por <a href="https://www.linkedin.com/in/paulo-victor-a1648724a/">Paulo Victor</a>
+					</p>
+
+					<PublicationButton imgSrc={itchButton} publicationUrl={dicestItchLink}/>
+					<PublicationButton imgSrc={githubButton} publicationUrl={dicestGitLink} />
+					<br>
+				</div>
+			</CollapsibleSection>
+		</div>
 	</div>
 </div>
 
@@ -154,16 +178,6 @@
 
 		margin-right: 3%;
 		margin-left: 3%;
-	}
-
-	.play-store-btn {
-		transform: scale(1);
-		transition: transform 0.2s;
-	}
-
-	.play-store-btn:hover {
-		transform: scale(1.2);
-		/* opacity: 75%; */
 	}
 
 	p {

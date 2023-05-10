@@ -11,7 +11,7 @@
 		<button aria-expanded={expanded} on:click={() => (expanded = !expanded)}>
 
 			<div class="sectionHeader">
-				<img src={iconSrc} width="auto" height="100">
+				<img src={iconSrc} width="auto" height="100" alt={headerText}>
 
 				<div class="title">
 					<strong> {headerText} </strong>
