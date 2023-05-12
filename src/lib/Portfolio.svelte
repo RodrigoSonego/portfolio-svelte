@@ -127,7 +127,8 @@
 							<li>Implementação de UI responsiva</li>
 							<li>Publicação para Android</li>
 						</ul>
-
+					
+					<h3>Publicação</h3>
 					<PublicationButton imgSrc={googlePlay} publicationUrl={cienciasLink} />
 				</div>
 			</CollapsibleSection>
@@ -146,10 +147,15 @@
 						<br>
 						Arte por <a href="https://www.linkedin.com/in/paulo-victor-a1648724a/">Paulo Victor</a>
 					</p>
-
+					<h3>Publicação</h3>
 					<PublicationButton imgSrc={itchButton} publicationUrl={dicestItchLink}/>
 					<PublicationButton imgSrc={githubButton} publicationUrl={dicestGitLink} />
-					<br>
+					<p/>
+					<h3>Galeria</h3>
+					<div class="preview-container">
+						<img src={dicestPreview} alt="DicestDungeon" height="400rem" width="auto">
+						<span class="caption">Menu de combate</span>
+					</div>
 				</div>
 			</CollapsibleSection>
 		</div>
@@ -182,5 +188,17 @@
 
 	p {
 		padding-left: 1.5rem;
+	}
+
+	.preview-container {
+		margin-top: 1rem;
+		display: flexbox;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.caption {
+		display: block;
+		font-size: 1.3rem;
 	}
 </style>
